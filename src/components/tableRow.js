@@ -11,11 +11,12 @@ export default class TableRowData extends React.Component {
 
   componentDidMount() {
     fetch(
-      "https://sharadcodes.github.io/covid19-indian-stats/indian_states.json"
+      "https://api.covid19india.org/data.json"
     )
       .then((res) => res.json())
       .then((data) => {
-        this.setState({ response: data });
+        this.setState({ response: data.statewise.splice(1) });
+        console.log('data', data.statewise)
       })
       .catch(console.log);
   }
@@ -24,12 +25,10 @@ export default class TableRowData extends React.Component {
     return this.state.response.map((data, index) => {
       return (
         <tr>
-          <td>{data.state_ut}</td>
-          <td>
-            {parseInt(data.confirmed_indian) +
-              parseInt(data.confirmed_foreign_nationals)}
-          </td>
-          <td>{data.cured}</td>
+          <td>{data.state}</td>
+          <td>{data.confirmed}</td>
+          <td>{data.active}</td>
+          <td>{data.recovered}</td>
           <td>{data.deaths}</td>
         </tr>
       );
