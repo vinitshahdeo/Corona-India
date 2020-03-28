@@ -31,6 +31,7 @@ import DonutChart from "./components/DonutChart";
 import NewsColumn from "./components/NewsColumn";
 import TodayAlert from "./components/TodayAlert";
 import PreCaution from "./components/Precuations";
+import TotalCase from "./components/TotalCase";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -140,6 +141,7 @@ export default class App extends React.Component {
         <PreCaution />
         <TableData />
         <NewsColumn />
+        <TotalCase />
         <Alert variant="success" class="myMessage">
           <Alert.Heading>
             <strong>Stay Home, Stay Safe!</strong>

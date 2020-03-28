@@ -11,7 +11,7 @@ export default class NewsColumn extends React.Component {
       <Container>
         <Row className="justify-content-md-center">
             <br></br>
-            <h3 className="news-headline"><strong>News Headlines</strong></h3>
+            <h3 className="news-headline"><strong><center>News Headlines</center></strong></h3>
             <br></br>
         </Row>
         <CardColumns>

@@ -48,9 +48,11 @@ export default class TodayAlert extends React.Component {
     return (
       <Container>
         <Row className="justify-content-md-center">
+          <center>
           <Button onClick={() => this.setShow(true)}>
             Check Today's Alert
           </Button>
+          </center>
         </Row>
       </Container>
     );
