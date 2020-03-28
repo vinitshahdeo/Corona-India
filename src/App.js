@@ -32,6 +32,7 @@ import NewsColumn from "./components/NewsColumn";
 import TodayAlert from "./components/TodayAlert";
 import PreCaution from "./components/Precuations";
 import TotalCase from "./components/TotalCase";
+import Symptoms from "./components/Symptoms";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -139,6 +140,7 @@ export default class App extends React.Component {
           <br></br>
         </Container>
         <PreCaution />
+        <Symptoms />
         <TableData />
         <NewsColumn />
         <TotalCase />

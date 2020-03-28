@@ -17,6 +17,10 @@ body {
   margin-top: 20px;
 }
 
+.symptoms {
+  text-align: justify;
+}
+
 .caseTable {
   padding: 10px;
 }
