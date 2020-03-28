@@ -47,15 +47,15 @@ export default class BarChart extends React.Component {
       confirmed = [],
       state = [];
     fetch(
-      "https://sharadcodes.github.io/covid19-indian-stats/indian_states.json"
+      "https://api.covid19india.org/data.json"
     )
       .then((res) => res.json())
       .then((data) => {
+        data = data.statewise.splice(1);
         for (index = 0; index < data.length; index++) {
-          state.push(data[index].state_ut);
+          state.push(data[index].state);
           confirmed.push(
-            parseInt(data[index].confirmed_foreign_nationals) +
-              parseInt(data[index].confirmed_indian)
+            parseInt(data[index].confirmed)
           );
         }
         this.setState({
