@@ -29,6 +29,7 @@ import BarChart from "./components/BarChart";
 import StackChart from "./components/StackChart";
 import DonutChart from "./components/DonutChart";
 import NewsColumn from "./components/NewsColumn";
+import TodayAlert from "./components/TodayAlert";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -101,6 +102,7 @@ export default class App extends React.Component {
             <Button variant="outline-info">Your friend,<br></br> <strong>Vinit Shahdeo</strong></Button>
           </p> */}
         </Jumbotron>
+        <TodayAlert />
         <Container>
           <Row className="justify-content-md-center myRow">
             <Col sm={6} md="auto" className="myCol">
