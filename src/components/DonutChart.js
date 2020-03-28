@@ -34,14 +34,15 @@ export default class DonutChart extends React.Component {
       state = [],
       cured = [];
     fetch(
-      "https://sharadcodes.github.io/covid19-indian-stats/indian_states.json"
+      "https://api.covid19india.org/data.json"
     )
       .then((res) => res.json())
       .then((data) => {
+        data = data.statewise.splice(1);
         for (index = 0; index < data.length; index++) {
-          if (parseInt(data[index].cured) !== 0) {
-            cured.push(parseInt(data[index].cured));
-            state.push(data[index].state_ut);
+          if (parseInt(data[index].recovered) !== 0) {
+            cured.push(parseInt(data[index].recovered));
+            state.push(data[index].state);
           }
         }
         this.setState({
