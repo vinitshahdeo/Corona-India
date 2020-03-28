@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, CardColumns, Container, Row } from "react-bootstrap";
+import { CardColumns, Container, Row } from "react-bootstrap";
 import NewsCards from "./NewsCards";
 export default class NewsColumn extends React.Component {
   constructor(props) {

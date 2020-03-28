@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, CardColumns, Container } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 export default class NewsCards extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +17,6 @@ export default class NewsCards extends React.Component {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.articles);
         for (index = 0; index < data.articles.length; index++) {
           news.push({
             title: data.articles[index].title,
@@ -30,7 +29,6 @@ export default class NewsCards extends React.Component {
         this.setState({
           news: news,
         });
-        console.log(news);
       })
       .catch(console.log);
   }
@@ -38,7 +36,7 @@ export default class NewsCards extends React.Component {
   render() {
     return this.state.news.map((data, index) => {
       return (
-        <Card>
+        <Card key={index}>
           <Card.Img variant="top" src={data.urlImg} />
           <Card.Body>
             <Card.Title>{data.title}</Card.Title>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert, AlertProps, Button, Container, Row } from "react-bootstrap";
+import { Alert, Button, Container, Row } from "react-bootstrap";
 
 /**
  * @author Vinit Shahdeo
@@ -18,16 +18,12 @@ export default class TodayAlert extends React.Component {
     });
   }
 
-  componentDidMount() {
-    fetch("https://corona.lmao.ninja/countries/IND")
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({
-          todayCases: data.todayCases,
-          todayDeaths: data.todayDeaths,
-        });
-      })
-      .catch(console.log);
+  componentWillReceiveProps(nextProps) {
+      console.log('next', nextProps);
+    this.setState({
+        todayCases: nextProps.dailyData[0].confirmeddelta,
+        todayRecovered: nextProps.dailyData[0].recovereddelta
+      });
   }
 
   render() {
@@ -36,9 +32,9 @@ export default class TodayAlert extends React.Component {
         <Alert variant="danger" onClose={() => this.setShow(false)} dismissible>
           <Alert.Heading>Today's COVID-19 Report</Alert.Heading>
           <p>
-            In India, total reported cases today is{" "}
-            <strong>{this.state.todayCases}</strong> and total deaths reported
-            today is <strong>{this.state.todayDeaths}</strong>. The{" "}
+            In India, total reported corona cases today is{" "}
+            <strong>{this.state.todayCases}</strong> and total recovered cases
+            today is <strong>{this.state.todayRecovered}</strong>. The{" "}
             <strong>lockdown</strong> has been put in place to control the
             situation, please follow this strictly.
           </p>

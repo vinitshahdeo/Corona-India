@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, TableProps, Container } from "react-bootstrap";
+import { Table, Container } from "react-bootstrap";
 
 export default class PreCaution extends React.Component {
   constructor(props) {

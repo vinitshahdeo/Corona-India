@@ -11,10 +11,10 @@ import {
   Row,
   Col,
   ButtonGroup,
-  Alert,
+  Alert
 } from "react-bootstrap";
 import PieChart from "./components/PieChart";
-import { getCoronaIndianData, getCurrentStats } from "./api/sanitizeData";
+import { getCurrentStats } from "./api/sanitizeData";
 import TableData from "./components/table";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -33,30 +33,33 @@ import TodayAlert from "./components/TodayAlert";
 import PreCaution from "./components/Precuations";
 import TotalCase from "./components/TotalCase";
 import Symptoms from "./components/Symptoms";
+import { fetchCovidData } from "./api/fetchCovidData";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
+      covidData: [],
     };
   }
   componentDidMount() {
-    fetch(
-      "https://corona.lmao.ninja/countries/IND"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        // var coronaData = getCoronaIndianData(data);
-        this.setState({
-          confirmed: data.cases,
-          deaths: data.deaths,
-          cure: data.recovered,
-          data: getCurrentStats(data.cases, data.deaths, data.recovered)
-        });
-        console.log(this.state.data);
-      })
-      .catch(console.log);
+    fetchCovidData((data, daily) => {
+      this.setState({
+        covidData: data.splice(1),
+        confirmed: data[0].confirmed,
+        deaths: data[0].deaths,
+        cure: data[0].recovered,
+        active: data[0].active,
+        data: getCurrentStats(
+          parseInt(data[0].confirmed),
+          parseInt(data[0].deaths),
+          parseInt(data[0].recovered),
+          parseInt(data[0].active)
+        ),
+        dailyData: daily
+      });
+    });
   }
 
   render() {
@@ -105,7 +108,7 @@ export default class App extends React.Component {
             <Button variant="outline-info">Your friend,<br></br> <strong>Vinit Shahdeo</strong></Button>
           </p> */}
         </Jumbotron>
-        <TodayAlert />
+        <TodayAlert dailyData = {this.state.dailyData}/>
         <Container>
           <Row className="justify-content-md-center myRow">
             <Col sm={6} md="auto" className="myCol">
@@ -116,32 +119,39 @@ export default class App extends React.Component {
                 Confirmed Cases{" "}
                 <Badge variant="light">{this.state.confirmed}</Badge>
               </Button>
-              <Button variant="danger" size="lg" block>
-                Total Deaths <Badge variant="light">{this.state.deaths}</Badge>
+              <Button variant="info" size="lg" block>
+                Total Active <Badge variant="light">{this.state.active}</Badge>
               </Button>
               <Button variant="secondary" size="lg" block>
                 Total Cured <Badge variant="light">{this.state.cure}</Badge>
               </Button>
+              <Button variant="danger" size="lg" block>
+                Total Deaths <Badge variant="light">{this.state.deaths}</Badge>
+              </Button>
             </Col>
           </Row>
         </Container>
-        <BarChart />
+        <BarChart data={this.state.covidData} />
         <Container>
           <Row>
             <Col lg={6}>
-              <h5 className="section-title"><strong>Number Of Deaths</strong></h5>
-              <StackChart />
+              <h5 className="section-title">
+                <strong>Number Of Deaths</strong>
+              </h5>
+              <StackChart data={this.state.covidData} />
             </Col>
             <Col lg={6}>
-              <h5 className="section-title"><strong>Number Of Cured Cases</strong></h5>
-              <DonutChart />
+              <h5 className="section-title">
+                <strong>Number Of Cured Cases</strong>
+              </h5>
+              <DonutChart data={this.state.covidData} />
             </Col>
           </Row>
           <br></br>
         </Container>
         <PreCaution />
         <Symptoms />
-        <TableData />
+        <TableData data={this.state.covidData} />
         <NewsColumn />
         <TotalCase />
         <Alert variant="success" class="myMessage">
@@ -149,12 +159,13 @@ export default class App extends React.Component {
             <strong>Stay Home, Stay Safe!</strong>
           </Alert.Heading>
           <p>
-            <strong>COVID-19</strong> or as the plebs call it, the <strong>coronavirus </strong> 
+            <strong>COVID-19</strong> or as the plebs call it, the{" "}
+            <strong>coronavirus </strong>
             has restricted a lot of us to our homes. You can choose to while
-            away your time sleeping; doing nothing or you could utilize this break
-            to <strong>‘Learn’</strong> something new. You know you’ve said this a lot to
-            yourself - “I want to Learn 'X' but I can’t seem to find the time.”
-            This is the time; Turn Your Self-Isolation into
+            away your time sleeping; doing nothing or you could utilize this
+            break to <strong>‘Learn’</strong> something new. You know you’ve
+            said this a lot to yourself - “I want to Learn 'X' but I can’t seem
+            to find the time.” This is the time; Turn Your Self-Isolation into
             Self-Improvement!
           </p>
           <hr />

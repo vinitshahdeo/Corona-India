@@ -20,7 +20,7 @@ export default class TableData extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <TableRowData />
+          <TableRowData data={this.props.data}/>
         </tbody>
       </Table>
     );
