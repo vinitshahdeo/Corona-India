@@ -1,12 +1,10 @@
 import React from "react";
 import {
   Accordion,
-  useAccordionToggle,
   Button,
   Card,
   Container,
 } from "react-bootstrap";
-import TableRowData from "./tableRow";
 
 /**
  * @author Vinit Shahdeo <vinitshahdeo@gmail.com>

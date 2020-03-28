@@ -1,4 +1,3 @@
-import _ from "lodash";
 // hacked by @vinitshahdeo
 function getCoronaIndianData(data) {
   var confirmed = 0,
@@ -12,7 +11,7 @@ function getCoronaIndianData(data) {
     cured += parseInt(data[index].cured);
     deaths += parseInt(data[index].deaths);
   }
-  console.log(cured, confirmed, deaths);
+  // console.log(cured, confirmed, deaths);
   return [
     {
       color: "#E38627",
@@ -32,23 +31,28 @@ function getCoronaIndianData(data) {
   ];
 }
 
-function getCurrentStats (total, deaths, cured) {
+function getCurrentStats (total, deaths, cured, active) {
   return [
     {
-      color: "#E38627",
+      color: "#ffc107",
       title: "Confirmed Cases",
       value: total,
     },
     {
-      color: "#C13C37",
+      color: "#dc3545",
       title: "Deaths",
       value: deaths,
     },
     {
-      color: "#6A2135",
+      color: "#6c757d",
       title: "cured",
       value: cured,
     },
+    {
+      color: "#17a2b8",
+      title: "active",
+      value: active,
+    }
   ];
 }
 
