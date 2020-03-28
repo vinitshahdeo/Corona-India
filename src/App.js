@@ -14,7 +14,7 @@ import {
   Alert,
 } from "react-bootstrap";
 import PieChart from "./components/PieChart";
-import { getCoronaIndianData } from "./api/sanitizeData";
+import { getCoronaIndianData, getCurrentStats } from "./api/sanitizeData";
 import TableData from "./components/table";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -39,16 +39,16 @@ export default class App extends React.Component {
   }
   componentDidMount() {
     fetch(
-      "https://sharadcodes.github.io/covid19-indian-stats/indian_states.json"
+      "https://corona.lmao.ninja/countries/IND"
     )
       .then((res) => res.json())
       .then((data) => {
-        var coronaData = getCoronaIndianData(data);
+        // var coronaData = getCoronaIndianData(data);
         this.setState({
-          data: coronaData,
-          confirmed: coronaData[0].value,
-          deaths: coronaData[1].value,
-          cure: coronaData[2].value,
+          confirmed: data.cases,
+          deaths: data.deaths,
+          cure: data.recovered,
+          data: getCurrentStats(data.cases, data.deaths, data.recovered)
         });
         console.log(this.state.data);
       })

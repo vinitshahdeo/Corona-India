@@ -4,6 +4,7 @@ import ReactMinimalPieChart from "react-minimal-pie-chart";
 export default class PieChart extends React.Component {
   constructor(props) {
     super(props);
+    
   }
 
   render() {

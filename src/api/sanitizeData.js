@@ -32,4 +32,24 @@ function getCoronaIndianData(data) {
   ];
 }
 
-export { getCoronaIndianData };
+function getCurrentStats (total, deaths, cured) {
+  return [
+    {
+      color: "#E38627",
+      title: "Confirmed Cases",
+      value: total,
+    },
+    {
+      color: "#C13C37",
+      title: "Deaths",
+      value: deaths,
+    },
+    {
+      color: "#6A2135",
+      title: "cured",
+      value: cured,
+    },
+  ];
+}
+
+export { getCoronaIndianData, getCurrentStats };
