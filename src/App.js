@@ -28,6 +28,7 @@ import {
 import BarChart from "./components/BarChart";
 import StackChart from "./components/StackChart";
 import DonutChart from "./components/DonutChart";
+import NewsColumn from "./components/NewsColumn";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -134,6 +135,7 @@ export default class App extends React.Component {
           <br></br>
         </Container>
         <TableData />
+        <NewsColumn />
         <Alert variant="success" class="myMessage">
           <Alert.Heading>
             <strong>Stay Home, Stay Safe!</strong>
