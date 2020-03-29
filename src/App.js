@@ -41,6 +41,7 @@ export default class App extends React.Component {
     this.state = {
       data: [],
       covidData: [],
+      code: "< />"
     };
   }
   componentDidMount() {
@@ -75,7 +76,7 @@ export default class App extends React.Component {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Hacked by:{" "}
+              {this.state.code}{" "} with ♡ by{" "}
               <a href="https://github.com/vinitshahdeo">@vinitshahdeo</a>
             </Navbar.Text>
           </Navbar.Collapse>
@@ -212,7 +213,7 @@ export default class App extends React.Component {
         </Nav>
         <Nav>
           <Badge pill variant="info" className="copyright">
-            Hacked by <strong>Vinit Shahdeo</strong>
+            Made with ♡ by <strong>Vinit Shahdeo</strong>
           </Badge>
           <br></br>
         </Nav>
