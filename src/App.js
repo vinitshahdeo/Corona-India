@@ -34,6 +34,7 @@ import PreCaution from "./components/Precuations";
 import TotalCase from "./components/TotalCase";
 import Symptoms from "./components/Symptoms";
 import { fetchCovidData } from "./api/fetchCovidData";
+import DisclaimerModal from "./components/Disclaimer";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -41,8 +42,10 @@ export default class App extends React.Component {
     this.state = {
       data: [],
       covidData: [],
-      code: "< />"
+      code: "< />",
+      modalShow: false
     };
+    this.setModalShow.bind(this);
   }
   componentDidMount() {
     fetchCovidData((data, daily) => {
@@ -63,6 +66,12 @@ export default class App extends React.Component {
     });
   }
 
+  setModalShow(show) {
+    this.setState({
+      modalShow: show
+    });
+  }
+
   render() {
     return (
       <div className="app">
@@ -76,7 +85,7 @@ export default class App extends React.Component {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              {this.state.code}{" "} with ♡ by{" "}
+              {this.state.code} with ♡ by{" "}
               <a href="https://github.com/vinitshahdeo">@vinitshahdeo</a>
             </Navbar.Text>
           </Navbar.Collapse>
@@ -109,7 +118,7 @@ export default class App extends React.Component {
             <Button variant="outline-info">Your friend,<br></br> <strong>Vinit Shahdeo</strong></Button>
           </p> */}
         </Jumbotron>
-        <TodayAlert dailyData = {this.state.dailyData}/>
+        <TodayAlert dailyData={this.state.dailyData} />
         <Container>
           <Row className="justify-content-md-center myRow">
             <Col sm={6} md="auto" className="myCol">
@@ -154,6 +163,7 @@ export default class App extends React.Component {
         <Symptoms />
         <TableData data={this.state.covidData} />
         <NewsColumn />
+        <DisclaimerModal />
         <TotalCase />
         <Alert variant="success" class="myMessage">
           <Alert.Heading>
