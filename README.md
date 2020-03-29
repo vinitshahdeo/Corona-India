@@ -85,6 +85,6 @@ if (_.isAwesome(thisRepo)) {
 ```
 ----
 
-<sup>**DISCLAIMER**: [This](http://corona-cases-india.netlify.com/) is an effort made to keep people aware about the latest news/reports related to `COVID-19`. Check the source for data [here](https://github.com/covid19india/api). It's a humble request to everyone to stay at home. </sup></p>
+<sup>**DISCLAIMER**: [This](http://corona-cases-india.netlify.com/) is an effort made to keep people updated with the latest news/reports related to `COVID-19`. Check the source for data [here](https://github.com/covid19india/api). It's a humble request to everyone to stay at home. </sup></p>
 
 [![GitHub search hit counter](https://img.shields.io/github/search/vinitshahdeo/Corona-India/coronavirus?logo=github)](https://github.com/vinitshahdeo) [![GitHub search hit counter](https://img.shields.io/github/search/vinitshahdeo/Corona-India/covid-19?color=tomato&logo=github)](https://github.com/vinitshahdeo) [![GitHub search hit counter](https://img.shields.io/github/search/vinitshahdeo/Corona-India/corona?color=teal&logo=github)](https://github.com/vinitshahdeo) [![Maintenance](https://img.shields.io/maintenance/yes/2020?color=dodgerblue&logo=github)](https://github.com/vinitshahdeo)
