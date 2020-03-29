@@ -26,8 +26,8 @@ body {
 }
 
 .news-headline {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
 }
 
@@ -71,6 +71,20 @@ body {
 
 .disclaimer_content {
   text-align: justify;
+}
+
+.myMessage {
+  text-align: justify;
+}
+
+.todayButton {
+  margin: auto;
+}
+
+@media (max-width: 480px) {
+  .developer_copyright {
+    display: none
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
