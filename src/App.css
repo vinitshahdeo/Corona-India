@@ -69,6 +69,10 @@ body {
   text-align: center
 }
 
+.disclaimer_content {
+  text-align: justify;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

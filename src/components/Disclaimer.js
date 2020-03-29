@@ -25,7 +25,7 @@ export default class DisclaimerModal extends React.Component {
     return (
       <Container>
         <Accordion defaultActiveKey="1">
-          <Card>
+          <Card  className="disclaimer_content">
             <Card.Header className="disclaimer">
               The data provided by this website is for general informational
               purposes only. <br></br>
