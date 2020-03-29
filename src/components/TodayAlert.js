@@ -8,7 +8,7 @@ export default class TodayAlert extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: true
+      show: true,
     };
   }
 
@@ -19,36 +19,41 @@ export default class TodayAlert extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-      console.log('next', nextProps);
     this.setState({
-        todayCases: nextProps.dailyData[0].confirmeddelta,
-        todayRecovered: nextProps.dailyData[0].recovereddelta
-      });
+      todayCases: nextProps.dailyData[0].confirmeddelta,
+      todayRecovered: nextProps.dailyData[0].recovereddelta,
+    });
   }
 
   render() {
     if (this.state.show) {
       return (
-        <Alert variant="danger" onClose={() => this.setShow(false)} dismissible>
-          <Alert.Heading>Today's COVID-19 Report</Alert.Heading>
-          <p>
-            In India, total reported corona cases today is{" "}
-            <strong>{this.state.todayCases}</strong> and total recovered cases
-            today is <strong>{this.state.todayRecovered}</strong>. The{" "}
-            <strong>lockdown</strong> has been put in place to control the
-            situation, please follow this strictly.
-          </p>
-        </Alert>
+        <Container>
+          <Alert
+            variant="danger"
+            onClose={() => this.setShow(false)}
+            dismissible
+          >
+            <Alert.Heading>Today's COVID-19 Report</Alert.Heading>
+            <p>
+              In India, total reported corona cases today is{" "}
+              <strong>{this.state.todayCases}</strong> and total recovered cases
+              today is <strong>{this.state.todayRecovered}</strong>. The{" "}
+              <strong>lockdown</strong> has been put in place to control the
+              situation, please follow this strictly.
+            </p>
+          </Alert>
+        </Container>
       );
     }
     return (
       <Container>
         <Row className="justify-content-md-center">
-          <center>
-          <Button onClick={() => this.setShow(true)}>
-            Check Today's Alert
-          </Button>
-          </center>
+          <span className="todayButton">
+            <Button onClick={() => this.setShow(true)}>
+              Check Today's Alert
+            </Button>
+          </span>
         </Row>
       </Container>
     );
