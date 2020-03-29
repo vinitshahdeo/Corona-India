@@ -2,6 +2,10 @@
 body {
   font-family: 'Montserrat Alternates', sans-serif;
 }
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
 .App {
   text-align: center;
   padding: 20px;

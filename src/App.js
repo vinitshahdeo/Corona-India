@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import {
   Jumbotron,
   Button,
@@ -35,6 +36,20 @@ import TotalCase from "./components/TotalCase";
 import Symptoms from "./components/Symptoms";
 import { fetchCovidData } from "./api/fetchCovidData";
 import DisclaimerModal from "./components/Disclaimer";
+
+import DarkTheme, { createTheme } from 'react-dark-theme'
+
+const lightTheme = {
+  background: 'white',
+  text: 'black',
+}
+
+const darkTheme = {
+  background: 'black',
+  text: 'white',
+}
+
+const myTheme = createTheme(darkTheme, lightTheme)
 
 export default class App extends React.Component {
   constructor(props) {
@@ -74,13 +89,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="app" style={{ backgroundColor: myTheme.background, color: myTheme.text }}>
+      
         <Navbar bg="dark" variant="dark" fixed="top">
           <Navbar.Brand href="#home">
             <strong>COVID-19</strong> | India{" "}
             <Badge variant="warning">{this.state.confirmed}</Badge>{" "}
             <Badge variant="danger">{this.state.deaths}</Badge>{" "}
             <Badge variant="success">{this.state.cure}</Badge>
+            <DarkTheme light={lightTheme} dark={darkTheme} />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
