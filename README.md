@@ -81,7 +81,7 @@ if (_.isAwesome(thisRepo)) {
 ```
 ----
 
-<sup>**DISCLAIMER**: This is an effort made to keep people aware about the latest news/reports related to `COVID-19`. Check the source for data [here](https://github.com/covid19india/api). It's a humble request to everyone to stay at home. </sup></p>
+<sup>**DISCLAIMER**: [This](http://corona-cases-india.netlify.com/) is an effort made to keep people aware about the latest news/reports related to `COVID-19`. Check the source for data [here](https://github.com/covid19india/api). It's a humble request to everyone to stay at home. </sup></p>
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/vinitshahdeo)
 
