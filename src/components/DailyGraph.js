@@ -61,7 +61,7 @@ export default class DailyGraph extends React.Component {
           data: nextProps.data,
         },
         {
-          name: "Total",
+          name: "Total so far",
           data: nextProps.total,
         },
         {
