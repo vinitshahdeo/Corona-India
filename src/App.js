@@ -21,13 +21,14 @@ import TodayAlert from "./components/TodayAlert";
 import PreCaution from "./components/Precuations";
 import TotalCase from "./components/TotalCase";
 import Symptoms from "./components/Symptoms";
-import { fetchCovidData } from "./api/fetchCovidData";
+import { fetchCovidData, fetchGlobalCovidData } from "./api/fetchCovidData";
 import DisclaimerModal from "./components/Disclaimer";
 import CountUp from "react-countup";
 import Footer from "./components/Footer.js";
 import MyMessage from "./components/MyMessage";
 import DailyGraph from "./components/DailyGraph";
 import ScrollTop from "./components/ScrollTop";
+import GlobalTable from "./components/GlobalTable";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -40,7 +41,8 @@ export default class App extends React.Component {
       confirmed: 0,
       cure: 0,
       deaths: 0,
-      timeSeriesCases: []
+      timeSeriesCases: [],
+      countryData: []
     };
     this.setModalShow.bind(this);
   }
@@ -65,6 +67,11 @@ export default class App extends React.Component {
         dailyData: daily,
         timeSeriesCases: series
       });
+      fetchGlobalCovidData((countryData) => {
+        this.setState({
+          countryData
+        });
+      })
     });
   }
 
@@ -186,6 +193,7 @@ export default class App extends React.Component {
         <NewsColumn />
         <DisclaimerModal />
         <TotalCase />
+        <GlobalTable data={this.state.countryData}/>
         <MyMessage />
         <ScrollTop />
         <Footer />

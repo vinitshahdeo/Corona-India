@@ -25,8 +25,8 @@ export default class TableData extends React.Component {
           <thead>
             <tr>
               <th>State</th>
-              <th>Confirmed Cases</th>
-              <th>Active Case</th>
+              <th>Confirmed</th>
+              <th>Active</th>
               <th>Cured</th>
               <th>Deaths</th>
             </tr>
