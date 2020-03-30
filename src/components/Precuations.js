@@ -32,7 +32,7 @@ export default class PreCaution extends React.Component {
               </td>
               <td>
                 Wash your hands regularly for 20 seconds, with soap and water or
-                alcohol-based hand rub
+                alcohol-based hand rub ✋ 🧼 🚰
               </td>
             </tr>
             <tr>
@@ -41,7 +41,7 @@ export default class PreCaution extends React.Component {
               </td>
               <td>
                 Cover your nose and mouth with a disposable tissue or flexed
-                elbow when you cough or sneeze
+                elbow when you cough or sneeze 🤧 👃 💪
               </td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@ export default class PreCaution extends React.Component {
               </td>
               <td>
                 Avoid close contact (1 meter or 3 feet) with people who are
-                unwell
+                unwell 🙏 😷 🚶‍
               </td>
             </tr>
             <tr>
@@ -59,7 +59,7 @@ export default class PreCaution extends React.Component {
               </td>
               <td>
                 Stay home and self-isolate from others in the household if you
-                feel unwell
+                feel unwell 🏠 👨 💉
               </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@ export default class PreCaution extends React.Component {
                 ❌ <strong>Don't</strong>
               </td>
               <td>
-                Touch your eyes, nose, or mouth if your hands are not clean
+                Touch your eyes, nose, or mouth if your hands are not clean 👃 👁️ 🤭
               </td>
             </tr>
           </tbody>
