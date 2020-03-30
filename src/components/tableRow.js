@@ -16,7 +16,7 @@ export default class TableRowData extends React.Component {
           <td>{data.state}</td>
           <td><Badge variant="warning">{data.confirmed}</Badge></td>
           <td><Badge variant="success">{data.active}</Badge></td>
-          <td><Badge variant="info">{data.recovered}</Badge></td>
+          <td><Badge variant="dark">{data.recovered}</Badge></td>
           <td><Badge variant="danger">{data.deaths}</Badge></td>
         </tr>
       );
