@@ -57,13 +57,13 @@ export default class TotalCase extends React.Component {
               <td>
                 <strong>Total Recovered</strong>
               </td>
-              <td><Badge variant="success">{this.state.recovered}</Badge></td>
+              <td><Badge variant="dark">{this.state.recovered}</Badge></td>
             </tr>
             <tr>
               <td>
                 <strong>Active Now</strong>
               </td>
-              <td><Badge variant="info">{this.state.active}</Badge></td>
+              <td><Badge variant="success">{this.state.active}</Badge></td>
             </tr>
           </tbody>
         </Table>
