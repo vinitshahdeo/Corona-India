@@ -122,7 +122,7 @@ export default class App extends React.Component {
             family.
           </h5>
           <h4>
-            <strong>Let's fight with Corona together!</strong>
+            <strong>Let's fight with Corona together! 😷</strong>
           </h4>
           <Badge pill variant="success">
             #CoronaKoHaranaHai
