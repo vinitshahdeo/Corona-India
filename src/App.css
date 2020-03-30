@@ -86,9 +86,21 @@ body {
   margin: auto;
 }
 
+.google-pay {
+  display: none;
+}
+
+.today-alert {
+  /* text-align: center; */
+}
+
 @media (max-width: 480px) {
   .developer_copyright {
     display: none
+  }
+  .google-pay {
+    display: block;
+    margin: 20px;
   }
 }
 
