@@ -39,6 +39,11 @@ body {
   text-align: center;
 }
 
+.statewise {
+  margin: auto;
+  padding: 20px;
+}
+
 .footer {
   margin: 20px;
   padding: 20px;
