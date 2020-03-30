@@ -122,7 +122,7 @@ export default class BarChart extends React.Component {
             size: 7,
           }
         },
-        colors: ['#FDD835', '#545454'],
+        colors: ['#FFA41B', '#545454'],
       },
     });
   }

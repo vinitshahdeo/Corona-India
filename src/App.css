@@ -94,6 +94,10 @@ body {
   /* text-align: center; */
 }
 
+.extra-padding {
+  margin: 40px;
+}
+
 @media (max-width: 480px) {
   .developer_copyright {
     display: none
