@@ -27,6 +27,7 @@ import CountUp from "react-countup";
 import Footer from "./components/Footer.js";
 import MyMessage from "./components/MyMessage";
 import DailyGraph from "./components/DailyGraph";
+import ScrollTop from "./components/ScrollTop";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -186,6 +187,7 @@ export default class App extends React.Component {
         <DisclaimerModal />
         <TotalCase />
         <MyMessage />
+        <ScrollTop />
         <Footer />
       </div>
     );

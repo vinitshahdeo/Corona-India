@@ -57,7 +57,6 @@ function getCurrentStats (total, deaths, cured, active) {
 }
 
 function getDailyData (data) {
-  console.log(data);
   var date = [],
     confirmed = [],
     total = [],
