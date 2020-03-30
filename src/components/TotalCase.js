@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Container } from "react-bootstrap";
+import { Table, Container, Badge } from "react-bootstrap";
 
 export default class TotalCase extends React.Component {
   constructor(props) {
@@ -45,25 +45,25 @@ export default class TotalCase extends React.Component {
               <td>
                 <strong>Total Cases</strong>
               </td>
-              <td>{this.state.cases}</td>
+              <td><Badge variant="warning">{this.state.cases}</Badge></td>
             </tr>
             <tr>
               <td>
                 <strong>Total Deaths</strong>
               </td>
-              <td>{this.state.deaths}</td>
+              <td><Badge variant="danger">{this.state.deaths}</Badge></td>
             </tr>
             <tr>
               <td>
                 <strong>Total Recovered</strong>
               </td>
-              <td>{this.state.recovered}</td>
+              <td><Badge variant="dark">{this.state.recovered}</Badge></td>
             </tr>
             <tr>
               <td>
                 <strong>Active Now</strong>
               </td>
-              <td>{this.state.active}</td>
+              <td><Badge variant="success">{this.state.active}</Badge></td>
             </tr>
           </tbody>
         </Table>
