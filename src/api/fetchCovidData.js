@@ -3,7 +3,7 @@ function fetchCovidData(cb) {
       .then((res) => res.json())
       .then((data) => {
         // console.log("Fetched state wise data:", data.statewise);
-        cb(data.statewise, data.key_values);
+        cb(data.statewise, data.key_values, data.cases_time_series);
       })
       .catch(console.log);
   }

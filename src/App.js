@@ -8,10 +8,10 @@ import {
   Navbar,
   Container,
   Row,
-  Col,
+  Col
 } from "react-bootstrap";
 import PieChart from "./components/PieChart";
-import { getCurrentStats } from "./api/sanitizeData";
+import { getCurrentStats, getDailyData } from "./api/sanitizeData";
 import TableData from "./components/table";
 import BarChart from "./components/BarChart";
 import StackChart from "./components/StackChart";
@@ -26,6 +26,7 @@ import DisclaimerModal from "./components/Disclaimer";
 import CountUp from "react-countup";
 import Footer from "./components/Footer.js";
 import MyMessage from "./components/MyMessage";
+import DailyGraph from "./components/DailyGraph";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -38,11 +39,12 @@ export default class App extends React.Component {
       confirmed: 0,
       cure: 0,
       deaths: 0,
+      timeSeriesCases: []
     };
     this.setModalShow.bind(this);
   }
   componentDidMount() {
-    fetchCovidData((data, daily) => {
+    fetchCovidData((data, daily, series) => {
       this.setState({
         covidData: data.splice(1),
         confirmed: parseInt(data[0].confirmed),
@@ -60,6 +62,7 @@ export default class App extends React.Component {
           parseInt(data[0].active)
         ),
         dailyData: daily,
+        timeSeriesCases: series
       });
     });
   }
@@ -167,6 +170,14 @@ export default class App extends React.Component {
             </Col>
           </Row>
           <br></br>
+        </Container>
+        <Container>
+          <DailyGraph
+            data={getDailyData(this.state.timeSeriesCases).confirmed}
+            series={getDailyData(this.state.timeSeriesCases).date}
+            total={getDailyData(this.state.timeSeriesCases).total}
+            recovered={getDailyData(this.state.timeSeriesCases).recovered}
+          />
         </Container>
         <PreCaution />
         <Symptoms />

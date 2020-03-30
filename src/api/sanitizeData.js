@@ -56,4 +56,25 @@ function getCurrentStats (total, deaths, cured, active) {
   ];
 }
 
-export { getCoronaIndianData, getCurrentStats };
+function getDailyData (data) {
+  console.log(data);
+  var date = [],
+    confirmed = [],
+    total = [],
+    recovered = [],
+    index;
+  for(index = 0 ; index <data.length; index++) {
+    date.push(data[index].date);
+    confirmed.push(data[index].dailyconfirmed);
+    total.push(data[index].totalconfirmed);
+    recovered.push(data[index].dailyrecovered);
+  }
+  return {
+    date: date.splice(-15),
+    confirmed: confirmed.splice(-15),
+    total: total.splice(-15),
+    recovered: total.splice(-15)
+  }
+}
+
+export { getCoronaIndianData, getCurrentStats, getDailyData };
