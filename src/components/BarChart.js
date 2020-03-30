@@ -61,7 +61,7 @@ export default class BarChart extends React.Component {
         {
           name: "Total Reported cases",
           data: confirmed,
-        },
+        }
       ],
       options: {
         chart: {
@@ -134,7 +134,7 @@ export default class BarChart extends React.Component {
           options={this.state.options}
           series={this.state.series}
           type="line"
-          height={350}
+          height={400}
           className="barchart"
         />
       </div>
