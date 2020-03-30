@@ -54,7 +54,7 @@ export default class DailyGraph extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.state = {
+    this.setState({
       series: [
         {
           name: "Confirmed today",
@@ -72,24 +72,33 @@ export default class DailyGraph extends React.Component {
       options: {
         chart: {
           type: "area",
-          height: 350,
+          height: 650,
           zoom: {
             enabled: false,
           },
         },
+        toolbar: {
+            show: false
+        },
         dataLabels: {
-          enabled: false,
+          enabled: true,
+        },
+        dropShadow: {
+            enabled: true,
+            top: 0,
+            left: 0,
+            blur: 3,
+            opacity: 0.5
         },
         stroke: {
-          curve: "straight",
+          curve: "smooth",
         },
-
         title: {
-          text: "Date wise reported COVID-19 cases",
+          text: "Last 15 days reported COVID-19 cases",
           align: "center",
         },
         subtitle: {
-          text: "Last 15 days",
+          text: "Click on Blue, Green, Yellow dots below",
           align: "center",
         },
         labels: nextProps.series,
@@ -97,13 +106,20 @@ export default class DailyGraph extends React.Component {
           type: "datetime",
         },
         yaxis: {
-          opposite: true,
+          opposite: false,
         },
         legend: {
           horizontalAlign: "center",
-        },
+          position: 'top',
+          onItemClick: {
+            toggleDataSeries: true
+          },
+          onItemHover: {
+            highlightDataSeries: true
+          }
+        }
       },
-    };
+    });
   }
 
   render() {

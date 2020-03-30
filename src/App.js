@@ -162,7 +162,7 @@ export default class App extends React.Component {
           </Row>
         </Container>
         <BarChart data={this.state.covidData} />
-        <Container>
+        <Container className="extra-padding">
           <Row>
             <Col lg={6}>
               <h5 className="section-title">
