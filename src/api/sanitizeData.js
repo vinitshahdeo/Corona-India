@@ -44,7 +44,7 @@ function getCurrentStats (total, deaths, cured, active) {
       value: deaths,
     },
     {
-      color: "#6c757d",
+      color: "#28a745",
       title: "cured",
       value: cured,
     },

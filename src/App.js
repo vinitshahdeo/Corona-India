@@ -150,7 +150,7 @@ export default class App extends React.Component {
                 Total Active{" "}
                 <Badge variant="light">{this.state.activeCount}</Badge>
               </Button>
-              <Button variant="secondary" size="lg" block>
+              <Button variant="success" size="lg" block>
                 Total Cured{" "}
                 <Badge variant="light">{this.state.cureCount}</Badge>
               </Button>
