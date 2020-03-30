@@ -162,7 +162,8 @@ export default class App extends React.Component {
           </Row>
         </Container>
         <BarChart data={this.state.covidData} />
-        <Container className="extra-padding">
+        <Container className="extra-padding">{ }</Container>
+        <Container>
           <Row>
             <Col lg={6}>
               <h5 className="section-title">
@@ -179,6 +180,7 @@ export default class App extends React.Component {
           </Row>
           <br></br>
         </Container>
+        <Container className="extra-padding">{ }</Container>
         <Container>
           <DailyGraph
             data={getDailyData(this.state.timeSeriesCases).confirmed}
