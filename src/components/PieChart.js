@@ -1,6 +1,10 @@
 import React from "react";
 import ReactMinimalPieChart from "react-minimal-pie-chart";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class PieChart extends React.Component {
   constructor(props) {
     super(props);

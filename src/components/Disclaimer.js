@@ -3,6 +3,10 @@ import { Button, Accordion, Card, Container } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import disclaimerPath from "../disclaimer/DISCLAIMER.md";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class DisclaimerModal extends React.Component {
   constructor(props) {
     super(props);

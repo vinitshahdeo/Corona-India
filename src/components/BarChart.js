@@ -1,5 +1,10 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class BarChart extends React.Component {
   constructor(props) {
     super(props);
@@ -13,7 +18,7 @@ export default class BarChart extends React.Component {
       ],
       options: {
         chart: {
-          height: 350,
+          height: 450,
           type: "line",
           zoom: {
             enabled: false,
@@ -60,17 +65,28 @@ export default class BarChart extends React.Component {
       ],
       options: {
         chart: {
-          height: 450,
+          height: 750,
           type: "line",
           zoom: {
             enabled: false,
           },
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
         },
         dataLabels: {
           enabled: false,
         },
         stroke: {
-          curve: "straight",
+          curve: "smooth",
         },
         title: {
           text: "State wise reported cases in India",
@@ -79,12 +95,34 @@ export default class BarChart extends React.Component {
         grid: {
           row: {
             colors: ["#f3f3f3", "transparent"],
-            opacity: 0.5,
+            opacity: 0.3,
           },
         },
         xaxis: {
           categories: state,
         },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            gradientToColors: [ '#FDD835'],
+            shadeIntensity: 1,
+            type: 'horizontal',
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100, 100, 100]
+          },
+        },
+        markers: {
+          size: 4,
+          colors: ["#FFA41B"],
+          strokeColors: "#fff",
+          strokeWidth: 2,
+          hover: {
+            size: 7,
+          }
+        },
+        colors: ['#FDD835', '#545454'],
       },
     });
   }

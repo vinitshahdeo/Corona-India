@@ -1,6 +1,10 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class StackChart extends React.Component {
   constructor(props) {
     super(props);
