@@ -1,6 +1,10 @@
 import React from "react";
 import { Alert, Container } from "react-bootstrap";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class PreCaution extends React.Component {
   constructor(props) {
     super(props);

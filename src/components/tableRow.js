@@ -1,6 +1,10 @@
 import React from "react";
 import { Badge } from "react-bootstrap";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class TableRowData extends React.Component {
   constructor(props) {
     super(props);

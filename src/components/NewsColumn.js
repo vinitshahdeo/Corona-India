@@ -1,6 +1,11 @@
 import React from "react";
 import { CardColumns, Container, Row } from "react-bootstrap";
 import NewsCards from "./NewsCards";
+
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class NewsColumn extends React.Component {
   constructor(props) {
     super(props);

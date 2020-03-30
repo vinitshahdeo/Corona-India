@@ -1,6 +1,10 @@
 import React from "react";
 import { Table, Container, Badge } from "react-bootstrap";
 
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class TotalCase extends React.Component {
   constructor(props) {
     super(props);

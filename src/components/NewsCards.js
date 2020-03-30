@@ -1,5 +1,10 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+
+/**
+ * 
+ * @author Vinit Shahdeo <vinitshahdeo@gmail.com>
+ */
 export default class NewsCards extends React.Component {
   constructor(props) {
     super(props);
