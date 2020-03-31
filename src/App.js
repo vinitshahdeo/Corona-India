@@ -41,6 +41,7 @@ export default class App extends React.Component {
       confirmed: 0,
       cure: 0,
       deaths: 0,
+      active: 0,
       timeSeriesCases: [],
       countryData: []
     };
@@ -90,11 +91,14 @@ export default class App extends React.Component {
             <Badge variant="warning">
               <CountUp end={this.state.confirmed} duration={1.3} />
             </Badge>{" "}
-            <Badge variant="danger">
-              <CountUp end={this.state.deaths} duration={2} />
+            <Badge variant="info">
+              <CountUp end={this.state.active} duration={1.3} />
             </Badge>{" "}
             <Badge variant="success">
               <CountUp end={this.state.cure} duration={1.5} />
+            </Badge>{" "}
+            <Badge variant="danger">
+              <CountUp end={this.state.deaths} duration={2} />
             </Badge>
           </Navbar.Brand>
           <Navbar.Toggle />
