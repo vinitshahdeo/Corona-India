@@ -22,8 +22,8 @@ export default class TodayAlert extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      todayCases: nextProps.dailyData[0].confirmeddelta,
-      todayRecovered: nextProps.dailyData[0].recovereddelta,
+      todayCases: nextProps.dailyData.deltaconfirmed,
+      todayRecovered: nextProps.dailyData.deltarecovered,
     });
   }
 
