@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 
 // being a bit cool :p
 console.log(
-  `%cHi, I am Vinit Shahdeo!\nSuper glad to see you here.\nHope you are staying safe at home.\nFind me on GitHub (@vinitshahdeo)!\nConsider leaving star on my repositories.`,
+  `%cHi, I am Vinit Shahdeo!\nSuper glad to see you here.\nHope you are staying safe at home.\nFind me on GitHub (@vinitshahdeo)!\nConsider leaving star on my repositories.\n\n`,
   'color: yellow; background:black; font-size: 24pt; font-weight: bold',
 )
 
@@ -28,7 +28,27 @@ var styles = [
   , 'font-size: 32px'
 ].join(';');
 
-console.log('%c Stay Home, Stay Safe!', styles);
+var styles1 = [
+  'color: #FF6C37'
+  , 'display: block'
+  , 'text-shadow: 0 2px 0 rgba(0, 0, 0, 1)'
+  , 'line-height: 40px'
+  , 'font-weight: bold'
+  , 'font-size: 32px'
+].join(';');
+
+var styles2 = [
+  'color: teal'
+  , 'display: block'
+  , 'text-shadow: 0 2px 0 rgba(0, 0, 0, 1)'
+  , 'line-height: 40px'
+  , 'font-weight: bold'
+  , 'font-size: 32px'
+].join(';');
+
+console.log('%cLet\'s keep in touch, follow me:\n\n%cTwitter: @Vinit_Shahdeo\nGitHub: @vinitshahdeo\nLinkedIn: @vinitshahdeo\n', styles1, styles2);
+
+console.log('\n\n%c Stay Home, Stay Safe!%c\n\n', styles, styles1);
 
 ReactDOM.render(
   <React.StrictMode>
