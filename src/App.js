@@ -29,6 +29,7 @@ import MyMessage from "./components/MyMessage";
 import DailyGraph from "./components/DailyGraph";
 import ScrollTop from "./components/ScrollTop";
 import GlobalTable from "./components/GlobalTable";
+import IndiaMap from "./components/IndiaMap";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -166,6 +167,9 @@ export default class App extends React.Component {
           </Row>
         </Container>
         <BarChart data={this.state.covidData} />
+        <Container>
+          <IndiaMap/>
+        </Container>
         <Container className="extra-padding">{ }</Container>
         <Container>
           <Row>
