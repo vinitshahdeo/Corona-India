@@ -24,6 +24,8 @@ war we must win. The next few weeks are critical in this battle. I
 request everyone to stay at home and enjoy good time with
 family.
 
+<a href="https://www.producthunt.com/posts/covid-19-tracker-india?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-covid-19-tracker-india" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=191600&theme=dark" alt="COVID-19 Tracker | India - Get real-time state wise stats of COVID-19 in India | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+
 > [This](https://corona-cases-india.netlify.com/) is a small effort from my side to keep yourself updated with number of corona cases reported in India so far. Checkout the available APIs [here](https://covid-19-apis.postman.com/). Thankful to [this](https://github.com/covid19india) organization for such a wonderful API. [Click here](./DISCLAIMER.md) to view the disclaimer.
 
 [![GitHub license](https://img.shields.io/github/license/vinitshahdeo/Corona-India?logo=github)](https://github.com/vinitshahdeo/Corona-India/blob/master/LICENSE) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/vinitshahdeo/Corona-India?logo=react)
