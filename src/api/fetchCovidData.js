@@ -15,7 +15,7 @@ function fetchCovidData(cb) {
 function fetchGlobalCovidData(cb) {
   var index = 0,
     countryData = [];
-  fetch("https://corona.lmao.ninja/v2/countries?sort=country")
+  fetch("https://corona.lmao.ninja/v2/countries?sort=cases")
     .then((res) => res.json())
     .then((data) => {
       for (index = 0; index < data.length; index++) {

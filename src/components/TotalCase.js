@@ -17,7 +17,7 @@ export default class TotalCase extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://corona.lmao.ninja/all")
+    fetch("https://corona.lmao.ninja/v2/all")
       .then((res) => res.json())
       .then((data) => {
         this.setState({
