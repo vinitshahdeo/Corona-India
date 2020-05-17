@@ -65,6 +65,10 @@ while(_.isAlive(new Virus('COVID-19'))) {
 
 ```
 
+## Featured on Newspaper
+
+![news](https://github.com/vinitshahdeo/COVID19/raw/master/assets/news.png)
+
 ## < /> with ♡ by 
 
 
