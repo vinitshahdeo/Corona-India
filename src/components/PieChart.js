@@ -23,8 +23,9 @@ export default class PieChart extends React.Component {
         label
         labelPosition={60}
         labelStyle={{
-          fontFamily: "Verdana",
-          fontSize: "10px",
+          fontFamily: "Montserrat Alternates",
+          fontSize: "6px",
+          fontWeight: "bold"
         }}
         lengthAngle={360}
         lineWidth={20}
