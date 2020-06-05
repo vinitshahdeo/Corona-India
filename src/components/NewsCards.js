@@ -15,11 +15,14 @@ export default class NewsCards extends React.Component {
   }
 
   componentDidMount() {
+
+   const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+   const apiKey = "cf7f3c64d5b24083b7e9db822088fda1";
+   const url = `${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&q=COVID&sortBy=popularity&apiKey=${apiKey}&pageSize=9&page=1`;
+   const request = new Request(url);
     var index,
       news = [];
-    fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&q=COVID&sortBy=popularity&apiKey=cf7f3c64d5b24083b7e9db822088fda1&pageSize=9&page=1"
-    )
+    fetch(request)
       .then((res) => res.json())
       .then((data) => {
         for (index = 0; index < data.articles.length; index++) {
