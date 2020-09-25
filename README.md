@@ -1,4 +1,6 @@
 # COVID-19 | [Let's fight together with Corona](https://corona-cases-india.netlify.com/)!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0497585e-79a2-4557-aa08-cc2200c3af32/deploy-status)](https://app.netlify.com/sites/corona-cases-india/deploys)
+
 
 ```javascript
 
@@ -12,7 +14,7 @@
 
 ```
 
-### Stay Home<sup>Stay Safe</sup> [![Netlify Status](https://api.netlify.com/api/v1/badges/0497585e-79a2-4557-aa08-cc2200c3af32/deploy-status)](https://app.netlify.com/sites/corona-cases-india/deploys)
+### Stay Home Stay Safe 
 
 #### :mag_right: [Click here](https://corona-cases-india.netlify.com/) to visualize the state-wise Corona Cases in India! Keep yourself updated with latest news related to COVID-19.
 
