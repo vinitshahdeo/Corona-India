@@ -67,6 +67,18 @@ while(_.isAlive(new Virus('COVID-19'))) {
 
 ```
 
+## Related Work
+
+- [covid19api](http://github.com/vinitshahdeo/covid19api) - Playing with GraphQL and COVID-19 API! 
+  
+- [India Fights Corona -  Get current COVID-19 stats](https://indiafightscorona.netlify.app/)!
+
+- [COVID-19 Tracker - Homepage](https://vinitshahdeo.github.io/COVID19/)
+
+- An [Open Letter](https://github.com/vinitshahdeo/Water-Monitoring-System/issues/236) to all the contributors -  [STAY HOME, STAY SAFE!](https://github.com/vinitshahdeo/COVID19)
+
+
+
 ## Featured on Newspaper
 
 ![news](https://github.com/vinitshahdeo/COVID19/raw/master/assets/news.png)
