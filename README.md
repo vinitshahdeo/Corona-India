@@ -81,7 +81,7 @@ while(_.isAlive(new Virus('COVID-19'))) {
 
 ## Featured on Newspaper
 
-![news](https://github.com/vinitshahdeo/COVID19/raw/master/assets/news.png)
+[![news](https://vinitshahdeo.github.io/COVID19/img/news.png)](https://vinitshahdeo.github.io/COVID19/)
 
 ## < /> with ♡ by 
 
