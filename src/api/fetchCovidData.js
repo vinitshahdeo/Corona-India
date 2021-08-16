@@ -3,7 +3,7 @@
  * @author Vinit Shahdeo
  */
 function fetchCovidData(cb) {
-  fetch("https://api.covid19india.org/data.json")
+  fetch("https://data.covid19india.org/data.json")
     .then((res) => res.json())
     .then((data) => {
       // console.log("Fetched state wise data:", data.statewise, data.key_values, data.cases_time_series);

@@ -47,7 +47,7 @@ function getHeatMapData() {
   var index,
     mapData = [];
 
-  fetch("https://api.covid19india.org/data.json")
+  fetch("https://data.covid19india.org/data.json")
     .then((res) => res.json())
     .then((data) => {
       var stateData = data.statewise.splice(1);
