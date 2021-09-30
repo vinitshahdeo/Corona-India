@@ -1,5 +1,5 @@
 # COVID-19 | [Let's fight together with Corona](https://corona-cases-india.netlify.com/)!
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0497585e-79a2-4557-aa08-cc2200c3af32/deploy-status)](https://app.netlify.com/sites/corona-cases-india/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0497585e-79a2-4557-aa08-cc2200c3af32/deploy-status)](https://app.netlify.com/sites/corona-cases-india/deploys) [![Mentioned in Awesome](https://awesome.re/mentioned-badge.svg)](https://github.com/vinitshahdeo/COVID19/)
 
 
 ```javascript
@@ -76,6 +76,8 @@ while(_.isAlive(new Virus('COVID-19'))) {
 - [COVID-19 Tracker - Homepage](https://vinitshahdeo.github.io/COVID19/)
 
 - An [Open Letter](https://github.com/vinitshahdeo/Water-Monitoring-System/issues/236) to all the contributors -  [STAY HOME, STAY SAFE!](https://github.com/vinitshahdeo/COVID19)
+
+[![COVID-19 Tracker](https://github-readme-stats.vercel.app/api/pin/?username=vinitshahdeo&repo=COVID19)](https://github.com/vinitshahdeo/COVID19)
 
 
 
